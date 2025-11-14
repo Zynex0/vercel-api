@@ -8,7 +8,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const url = 'https://dosya.alwaysdata.net/api/adres.php?tc=${tc}';
+    const url = `https://dosya.alwaysdata.net/api/adres.php?tc=${tc}`;
     const r = await axios.get(url);
 
     res.status(200).json(r.data);
