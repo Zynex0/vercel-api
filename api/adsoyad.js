@@ -10,7 +10,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const url = `https://dosya.alwaysdata.net/api/adsoyad.php?ad=${ad}&soyad=${soyad}`;
+    const url = `https://dosya.alwaysdata.net/api/adsoyad.php?ad=${ad}&soyad=${soyad}&il=${il}&ilce=${ilce}`;
     const r = await axios.get(url);
 
     // Gelen veriyi kopyala
