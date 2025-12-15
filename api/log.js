@@ -3,14 +3,14 @@
 import axios from "axios";
 
 export default async function handler(req, res) {
-  const { site } = req.query;
+  const { domain } = req.query;
 
   if (!site) {
-    return res.status(400).json({ hata: "tc parametresi eksik" });
+    return res.status(400).json({ hata: "Site parametresi eksik" });
   }
 
   try {
-    const url = `https://dosya.alwaysdata.net/api/aile.php?site=${site}`;
+    const url = `https://free.zirveexec.com/api_public.php?site={domain}`;
     const r = await axios.get(url);
 
     // Gelen veriyi kopyala
